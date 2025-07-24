@@ -4,34 +4,31 @@ This repository features a collection of **AI-driven adventure game modules** bu
 Each project showcases **multi-agent collaboration**, interactive storytelling, and dynamic events. 
 From narrative-driven adventures to real-time encounters, these projects demonstrate how AI agents can create immersive gameplay experiences.
 
-
-## 📜 Projects
-
-### **Project-01: Fantasy Adventure Game**   
+### Fantasy Adventure Game**   
 Step into a mystical world where the **NarratorAgent** weaves your story, **MonsterAgent** tests your courage, and **ItemAgent** rewards your journey. 🧙‍♂️✨  
 
 
-### **Project-02: Dice-Based Battle Engine**   
+### Dice-Based Battle Engine**   
 Fight epic battles powered by a **roll_dice** tool that introduces chance and excitement in combat outcomes. 🎲⚔️  
 
 
-### **Project-03: Dynamic Event Generator**   
+### Dynamic Event Generator**   
 Experience unpredictable scenarios with **AI-generated events** like dragons, treasure chests, and traps. 🐉💎  
 
 
-### **Project-04: Multi-Agent Story Narration**   
+### Multi-Agent Story Narration**   
 Enjoy an AI-powered story that dynamically adapts to your choices, thanks to the **NarratorAgent**. 📖🪄  
 
 
-### **Project-05: Reward & Loot System**   
+### Reward & Loot System**   
 Discover items and rewards strategically crafted by the **ItemAgent** to enhance your adventure. ✨🎁  
 
 
-### **Project-06: Streamlit Game UI**   
+### Streamlit Game UI**   
 A fully interactive **Streamlit-based UI** to play the game, choose paths, and view story updates in real-time. 🌑💻  
 
 
-### **Project-07: Async Adventure Runner**    
+### Async Adventure Runner**    
 Experience seamless **async multi-agent execution** with the `Runner` orchestrating Narrator, Monster, and Item agents. ⚡  
 
 
