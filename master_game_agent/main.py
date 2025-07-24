@@ -1,86 +1,11 @@
-# import os
-# from dotenv import load_dotenv
-# from agents import Agent, Runner, AsyncOpenAI,OpenAIChatCompletionsModel
-# from agents.run import RunConfig
-# from game_tool import roll_dice, generate_event
-
-# load_dotenv()
-# external_client = AsyncOpenAI(
-#     api_key=os.getenv("GEMINI_API_KEY"),
-#     base_url="https://generativelanguage.googleapis.com/v1beta/openai/",
-#     )
-
-# model = OpenAIChatCompletionsModel(
-#     model="gemini-2.0-flash",
-#     openai_client=external_client
-#     )
-
-# config = RunConfig(
-#     model=model,
-#     model_provider=external_client,
-#     tracing_disabled=True
-#     )
-
-# narrrator_agent = Agent(
-#     name="NarratorAgent",
-#     instructions="You narrate the advanture.Ask the playr for choices.",
-#     model=model
-# )
-# momster_agent = Agent(
-#     name="monsterAgent",
-#     instructions="You handle moster encounters using roll_dice and generate_event.",
-#     model=model,
-#     tools=[roll_dice, generate_event]
-# )
-# item_agent = Agent(
-#     name="ItemAgent",
-#     instructions="You provide rewards or items to the player.",
-#     model=model
-# )
-
-# def main():
-#     print("\U0001F3AE Welcome to Fantasy Game!")
-#     choice = input("🌲 Do you enter the forest or turn back? ➡ Enter the forest.")
-
-#     result1 = Runner.run_sync(narrrator_agent, choice, run_config=config)
-#     print("\n📋 Story:", result1.final_output)
-
-#     result2 = Runner.run_sync(momster_agent, "Start encounter", run_config=config)
-#     print("\n💥Encounter:", result2.final_output)
-
-#     result3 = Runner.run_sync(item_agent, "Give reward", run_config=config)
-#     print("\n✨🎁 Reward:", result3.final_output)
-
-
-
-# if __name__ == "__main__":
-#     main()
-
-
-
 import os
 import random
 import asyncio
 from dotenv import load_dotenv
 import streamlit as st
-
 from agents import Agent, Runner, AsyncOpenAI, OpenAIChatCompletionsModel, function_tool
 from agents.run import RunConfig
 
-# 🛠️ Tools
-@function_tool
-def roll_dice() -> str:
-    return f"🎲 You rolled a {random.randint(1, 6)}!"
-
-@function_tool
-def generate_event() -> str:
-    events = [
-        "You encountered a dragon!",
-        "You found a treasure chest.",
-        "You fell into a trap!",
-        "You met a mysterious wizard."
-    ]
-    return random.choice(events)
 
 # 🔐 Load Environment
 load_dotenv()
