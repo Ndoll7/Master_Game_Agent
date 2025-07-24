@@ -1,6 +1,7 @@
 from agents import function_tool
 import random
 
+# 🛠️ Tools
 @function_tool
 def roll_dice() -> str:
     return f"🎲 You rolled a {random.randint(1, 6)}!"
@@ -11,6 +12,6 @@ def generate_event() -> str:
         "You encountered a dragon!",
         "You found a treasure chest.",
         "You fell into a trap!",
-        "You set a mysterious wizard."
+        "You met a mysterious wizard."
     ]
     return random.choice(events)
